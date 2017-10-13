@@ -16,7 +16,8 @@ public class HttpURLConnection_Get_Params {
 			IOException {
 
 		// The url has to end with '?' if we want to send parameters
-		String url = "http://example.com:8082/subfolder/subsubfolder/result?";
+//		String url = "http://example.com:8082/subfolder/subsubfolder/result?";
+		String url = "http://posttestserver.com/post.php?";
 
 		// Uses LinkedHashMap instead of HashMap to preserve the order of
 		// the inserted parameters
@@ -71,7 +72,7 @@ public class HttpURLConnection_Get_Params {
 		}
 
 		String resultString = result.toString();
-		// System.out.println("sr: " + resultString);
+		System.out.println("sr: " + resultString);
 		return resultString.length() > 0 ? resultString.substring(0,
 				resultString.length() - 1) : resultString;
 	}
